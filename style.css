@@ -2,10 +2,10 @@ body {
   height: 100vh;
   font-family: Roboto, sans-serif;
   margin: 0px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background: url('download.jfif');
+  background-color: white;
+  overflow: hidden;
+  background: gainsboro;
+  display:flex
 }
 .title{
   margin:auto;
