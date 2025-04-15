@@ -6,7 +6,6 @@ body {
   background-size: cover;
   background-position: center;
   background: url('download.jfif');
-  display:flex
 }
 .title{
   margin:auto;
