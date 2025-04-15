@@ -2,7 +2,9 @@ body {
   height: 100vh;
   font-family: Roboto, sans-serif;
   margin: 0px;
-  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
   background: url('download.jfif');
   display:flex
