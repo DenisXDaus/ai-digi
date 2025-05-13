@@ -6,8 +6,11 @@ function send() {
   running = true;
   addMsg(msg);
   //DELEAY MESSAGE RESPOSE Echo
-  window.setTimeout(addResponseMsg, 1000, msg);
-}
+  window.setTimeout(function () {
+    var response = generateResponse(msg);
+    addResponseMsg(response);
+  }, 1000);
+  }
 function addMsg(msg) {
   var div = document.createElement("div");
   div.innerHTML =
@@ -22,6 +25,21 @@ function addMsg(msg) {
     "message-box"
   ).scrollHeight;
 }
+function generateResponse(msg) {
+  msg = msg.toLowerCase();
+  if (msg.includes("hai") || msg.includes("hello")) {
+    return "Halo juga! Ada yang bisa saya bantu?";
+  } else if (msg.includes("siapa kamu")) {
+    return "Saya Digi Ai, asisten virtual kamu!";
+  } else if (msg.includes("apakah kamu memiliki kecerdasan")) {
+    return "Saya memiliki kecerdasan tetapi saya belum memiliki otak!";
+  } else if (msg.includes("terima kasih")) {
+    return "Sama-sama!";
+  } else {
+    return "Maaf, saya belum ngerti maksudnya. 😅";
+  }
+}
+
 function addResponseMsg(msg) {
   var div = document.createElement("div");
   div.innerHTML = "<div class='chat-message-received'>" + msg + "</div>";
